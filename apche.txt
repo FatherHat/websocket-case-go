@@ -1,0 +1,4 @@
+httpd -t 检查配置文件语法
+
+service httpd restart    centos6的命令重启
+systemctl restart httpd     centos7的重启
