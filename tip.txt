@@ -1,0 +1,14 @@
+docker run -p 3307:3306 --name mysql_hyperf -v /d/volumes/hyperf/mysql/log:/var/log/mysql -v /d/volumes/hyperf/mysql/data:/var/lib/mysql -v /d/volumes/hyperf/mysql/conf/my.cnf:/etc/my.cnf --network hyperf-pro --restart=always --privileged=true -e MYSQL_ROOT_PASSWORD=root -it mysql
+
+redis
+docker run -p 6380:6379 --name myredis --network my-net -v /d/volumes/redis/redis.conf:/etc/redis/redis.conf -v /d/volumes/redis/data:/data -d redis  redis-server  --appendonly yes
+
+查看所有项目：ssh gitolite
+拉取项目：git clone gitolite:项目名
+
+git clone gitolite:AdminApi
+git clone gitolite:customer_service
+git clone gitolite:ProductionLine
+
+
+docker 主从搭建
